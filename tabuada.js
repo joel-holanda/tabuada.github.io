@@ -13,13 +13,19 @@ function apagar(){
 
 function tabu(){    
         apagar()
-    for (a = 1; 10 >= a; a++){
         var valor = document.getElementById('pegaValor').value;
-        var multiplicar = a * valor
-        var corpo = document.body.querySelector('div');
-        var elemento = document.createElement('h1');
-        var fator = document.createTextNode(a + " X " + valor + " = " + multiplicar);
-        elemento.appendChild(fator);
-        corpo.appendChild(elemento);
+        if (valor == ''){
+            alert("Digite um valor")
+        }else{
+        for (a = 1; 10 >= a; a++){
+            var valor = document.getElementById('pegaValor').value;
+            var multiplicar = a * valor
+            var corpo = document.body.querySelector('div');
+            var elemento = document.createElement('h1');
+            var fator = document.createTextNode(a + " X " + valor + " = " + multiplicar);
+            elemento.appendChild(fator);
+            corpo.appendChild(elemento);
+        }
+
     }    
 }
